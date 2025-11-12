@@ -37,7 +37,7 @@ This project demonstrates core ML engineering skills through building, optimizin
 
 ### Model Deployment
 - **Scoring Script Development:** Created inference script with proper input validation
-- **Azure ML Endpoint:** Deployed model to managed endpoint with authentication
+- **Azure ML Endpoint:** Deployed model to endpoint 
 - **A/B Testing Setup:** Configured traffic routing (70% optimized model, 30% baseline)
 - **API Testing:** Validated endpoint with sample predictions and documented request/response format
 
@@ -48,67 +48,14 @@ This project demonstrates core ML engineering skills through building, optimizin
 | **Cloud Platform** | Microsoft Azure Machine Learning |
 | **ML Framework** | scikit-learn (Random Forest Classifier) |
 | **Experiment Tracking** | MLflow, Azure ML Experiments |
-| **Deployment** | Azure ML Managed Endpoints, Azure Inference Server |
+| **Deployment** | Azure ML Managed Endpoints |
 | **Languages** | Python 3.10 |
 | **Key Libraries** | pandas, numpy, scikit-learn, joblib, azureml-sdk, azureml-mlflow |
 | **Tools** | Jupyter Notebooks, Azure ML Studio |
 
-## 📁 Repository Contents
-
-```
-azure-ml-churn-prediction/
-├── README.md
-├── .gitignore
-├── requirements.txt
-├── environment-config.yaml
-├── notebooks/
-│   ├── 01_create_data_asset.ipynb      # Data versioning (my work)
-│   ├── 02_data_prep_and_modeling.ipynb # Model training & optimization (my work)
-│   └── 03_model_deployment.ipynb       # Deployment setup (my work)
-├── src/
-│   └── inference-script.py             # Scoring script (my work)
-├── data/
-│   └── README.md
-└── docs/
-    └── project_documentation.pdf       # My documented contributions
 ```
 
 **Note:** This repository contains only the components I developed and documented (Steps 1-4, 7 of the original project). The complete group project included additional components (pipeline automation, Flask API, Streamlit UI) developed by my project partner.
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Azure subscription with Azure ML workspace
-- Python 3.10+
-- Azure CLI with ML extension
-
-### Environment Setup
-
-1. **Clone the repository:**
-```bash
-git clone https://github.com/andrewneil19/azure-ml-churn-prediction.git
-cd azure-ml-churn-prediction
-```
-
-2. **Create conda environment:**
-```bash
-conda env create -f environment-config.yaml
-conda activate clf-model-environment-pipeline
-```
-
-3. **Configure Azure ML workspace:**
-```python
-from azure.ai.ml import MLClient
-from azure.identity import DefaultAzureCredential
-
-ml_client = MLClient(
-    DefaultAzureCredential(),
-    subscription_id="your-subscription-id",
-    resource_group_name="your-resource-group",
-    workspace_name="your-workspace"
-)
-```
 
 ### Data Setup
 
@@ -118,7 +65,7 @@ The project uses the telecom churn dataset (V1 and V2 versions):
 
 Datasets are managed as Azure ML Data Assets with version tracking.
 
-## 🔧 Model Development
+## Model Development
 
 ### Feature Engineering
 
@@ -145,7 +92,7 @@ RandomForestClassifier(
     random_state=12345
 )
 ```
-**Performance:** Accuracy: 88.5%, Recall: 80.0%, F1: 66.9%
+**Performance:** Accuracy: 88.5%, Recall: 80.0%, Precision: 57.4%
 
 ### Optimized Model (Version 2)
 ```python
@@ -156,7 +103,7 @@ RandomForestClassifier(
     random_state=12345
 )
 ```
-**Performance:** Accuracy: 92.7%, Recall: 66.9%, F1: 72.7%, Precision: 79.5%
+**Performance:** Accuracy: 92.7%, Recall: 66.9%, Precision: 79.5%
 
 ## 📈 My ML Engineering Workflow
 
@@ -183,7 +130,7 @@ This workflow represents the components I developed:
 7. **Deployment** - Created scoring script and deployed to Azure ML endpoint
 8. **A/B Testing** - Configured traffic routing between model versions
 
-## 🌐 Model Deployment
+## Model Deployment
 
 ### Azure ML Managed Endpoint
 
@@ -195,8 +142,6 @@ This workflow represents the components I developed:
   - Deployment 2 (Baseline Model): 30%
 
 ### REST API Usage
-
-**Endpoint:** `https://[endpoint-name].[region].inference.ml.azure.com/score`
 
 **Request Format:**
 ```json
@@ -227,16 +172,6 @@ This workflow represents the components I developed:
 }
 ```
 
-### Testing the Deployment
-
-```bash
-# Using curl
-curl -X POST [ENDPOINT_URL] \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer [KEY]" \
-  -d @sample_input.json
-```
-
 ## 📊 Experiment Tracking with MLflow
 
 **Logged Parameters:**
@@ -259,13 +194,8 @@ curl -X POST [ENDPOINT_URL] \
 
 I configured the deployment for A/B testing to enable model version comparison:
 
-```python
-# Traffic allocation setup
-traffic = {
-    "optimized-model-deployment": 70,  # Version 2 (n_estimators=150, max_depth=10)
-    "baseline-model-deployment": 30    # Version 1 (n_estimators=75, max_depth=5)
-}
-```
+<img width="485" height="164" alt="image" src="https://github.com/user-attachments/assets/c43ea31e-d206-448a-8908-8965cf44a1d6" />
+
 
 **Purpose:**
 - Validate optimized model performance with real traffic
@@ -273,16 +203,7 @@ traffic = {
 - Enable safe rollback if needed
 - Provide data for performance analysis
 
-## 📊 Model Performance
-
-### Classification Metrics (Optimized Model)
-
-| Metric | Value |
-|--------|-------|
-| **Accuracy** | 92.7% |
-| **Precision** | 79.5% |
-| **Recall** | 66.9% |
-| **F1 Score** | 72.7% |
+## 📊 Model Performance - Confusion Matrix
 
 ### Confusion Matrix (Test Set)
 
@@ -377,15 +298,9 @@ Additional improvements that could extend this work:
 - Version control best practices
 - Technical documentation
 
-## 📝 Project Context
+## Project Context
 
 Completed as part of a collaborative MLOps project for advanced coursework. My contributions focused on the ML engineering pipeline: data management, model training, experiment tracking, and deployment. This work demonstrates skills directly applicable to ML Engineer and MLOps Engineer roles.
-
-## 🔗 Connect With Me
-
-- **LinkedIn:** [Andy Foreman](https://www.linkedin.com/in/yourprofile)
-- **GitHub:** [github.com/andrewneil19](https://github.com/andrewneil19)
-- **Email:** your.email@example.com
 
 ## 📄 License
 
