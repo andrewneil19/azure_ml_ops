@@ -1,0 +1,20 @@
+name: clf-model-environment-pipeline
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - numpy
+      - pandas
+      - scikit-learn
+      - mlflow==2.17.0
+      - azureml-mlflow==1.58.0
+      - azure-identity
+      - azureml
+      - azureml-core
+      - azure-ai-ml
+      - azureml-inference-server-http
+      - fsspec
+      - azureml-fsspec
+      - mldesigner
