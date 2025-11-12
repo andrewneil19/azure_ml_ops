@@ -10,7 +10,7 @@ This project demonstrates core ML engineering skills through building, optimizin
 
 **Business Problem:** Predict which telecom customers are likely to churn to enable proactive retention strategies.
 
-## 🎯 My Contributions
+## My Contributions
 
 ### Data Management & Versioning
 - **Multi-Version Data Assets:** Created and managed two versions of telecom churn dataset in Azure ML
@@ -188,7 +188,7 @@ This workflow represents the components I developed:
 - Confusion matrix visualization
 - Training/test datasets
 
-## 🎛️ A/B Testing Configuration
+## A/B Testing Configuration
 
 I configured the deployment for A/B testing to enable model version comparison:
 
