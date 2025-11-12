@@ -41,7 +41,7 @@ This project demonstrates core ML engineering skills through building, optimizin
 - **A/B Testing Setup:** Configured traffic routing (70% optimized model, 30% baseline)
 - **API Testing:** Validated endpoint with sample predictions and documented request/response format
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Category | Technologies |
 |----------|-------------|
@@ -52,8 +52,6 @@ This project demonstrates core ML engineering skills through building, optimizin
 | **Languages** | Python 3.10 |
 | **Key Libraries** | pandas, numpy, scikit-learn, joblib, azureml-sdk, azureml-mlflow |
 | **Tools** | Jupyter Notebooks, Azure ML Studio |
-
-```
 
 **Note:** This repository contains only the components I developed and documented (Steps 1-4, 7 of the original project). The complete group project included additional components (pipeline automation, Flask API, Streamlit UI) developed by my project partner.
 
