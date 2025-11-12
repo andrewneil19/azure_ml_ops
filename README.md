@@ -236,7 +236,7 @@ I configured the deployment for A/B testing to enable model version comparison:
 - Environment specification for dependency management
 - Comprehensive documentation of modeling decisions
 
-## 🔗 Additional Project Components
+## Additional Project Components
 
 The complete group project included additional MLOps infrastructure components:
 
@@ -253,25 +253,16 @@ Additional improvements that could extend this work:
 
 **Infrastructure & Automation:**
 - Automated retraining triggers based on data drift detection
-- CI/CD pipeline integration with GitHub Actions or Azure DevOps
+- CI/CD pipeline integration 
 - Scheduled pipeline execution for regular model updates
 
 **Monitoring & Observability:**
 - Real-time model performance dashboard
 - Data drift monitoring with alerting
-- Prediction logging and analysis infrastructure
+- Prediction logging 
 
 **Advanced ML Techniques:**
 - Feature importance analysis with SHAP values
-- Ensemble methods combining multiple model types
-- Online learning for incremental model updates
-- Feature store for centralized feature management
-
-**Production Optimization:**
-- Model quantization for faster inference
-- Batch prediction endpoints for efficiency
-- Multi-armed bandit for dynamic A/B testing
-- Advanced model explainability for business stakeholders
 
 ## 🎓 Skills Demonstrated
 
@@ -292,7 +283,6 @@ Additional improvements that could extend this work:
 **Software Engineering:**
 - Python development with ML stack (pandas, numpy, scikit-learn)
 - Jupyter notebook development
-- Environment management (conda)
 - Version control best practices
 - Technical documentation
 
@@ -300,7 +290,7 @@ Additional improvements that could extend this work:
 
 Completed as part of a collaborative MLOps project for advanced coursework. My contributions focused on the ML engineering pipeline: data management, model training, experiment tracking, and deployment. This work demonstrates skills directly applicable to ML Engineer and MLOps Engineer roles.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
